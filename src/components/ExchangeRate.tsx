@@ -1,18 +1,13 @@
 import {useEffect, useState} from 'react'
-import {requestOptions} from '../api'
+import {ICurrency} from '../models'
+import {apikey} from '../api'
 
-interface ICurrency {
-  currency: string
-  amount?: number
-}
-
-const basicCurrencies = ['usd', 'eur', 'gbp', 'rub']
+export const basicCurrencies = ['usd', 'eur', 'gbp', 'rub']
 
 function createInitialCurrencies(arr:string[]) {
   const currencies:ICurrency[] = []
-// eslint-disable-next-line
-  arr.map(currency => {
-    currencies.push({currency: currency, amount: undefined})
+  arr.map((currency, index) => {
+    return currencies.push({id: index, currency: currency, amount: ''})
   })
   
   return currencies
@@ -25,23 +20,28 @@ export const ExchangeRate = () => {
     let fetchedCurrencies = []
 
     for (let i = 0; i < currencies.length; i++) {
-      const response = await fetch(`https://api.apilayer.com/exchangerates_data/convert?to=uah&from=${currencies[i]}&amount=1`, requestOptions)
+      const response = await fetch(`https://v6.exchangerate-api.com/v6/${apikey}/pair/${currencies[i]}/UAH/1`)
       .then((response) => response.json())
-      
-      const amount = response.result.toFixed(2)
+      .catch(error => console.log('error', error))
 
-      fetchedCurrencies.push({ currency: currencies[i], amount: amount})
+      const amount = response.conversion_result.toFixed(2)
+
+      fetchedCurrencies.push({ id: i, currency: currencies[i], amount: amount})
     }
         
     setCurrencies(fetchedCurrencies)
   }
 
   useEffect(() => {
-    fetchAmount(basicCurrencies)
+    try {
+      fetchAmount(basicCurrencies)
+    } catch (error) {
+      console.log('error', error)
+    }
   },[])
 
   return (
-    <div className="px-4 flex space-x-4">
+    <div className="px-4 flex flex-wrap space-x-4">
 
       {
         basicCurrencies.map((currency, index) => {
