@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.a0cc1c27.css",
-    "main.js": "/static/js/main.05c1e967.js",
-    "static/js/787.e3291607.chunk.js": "/static/js/787.e3291607.chunk.js",
-    "index.html": "/index.html",
-    "main.a0cc1c27.css.map": "/static/css/main.a0cc1c27.css.map",
-    "main.05c1e967.js.map": "/static/js/main.05c1e967.js.map",
-    "787.e3291607.chunk.js.map": "/static/js/787.e3291607.chunk.js.map"
+    "main.css": "/exchange-rate-converter/static/css/main.a0cc1c27.css",
+    "main.js": "/exchange-rate-converter/static/js/main.c249f349.js",
+    "static/js/787.e3291607.chunk.js": "/exchange-rate-converter/static/js/787.e3291607.chunk.js",
+    "index.html": "/exchange-rate-converter/index.html",
+    "main.a0cc1c27.css.map": "/exchange-rate-converter/static/css/main.a0cc1c27.css.map",
+    "main.c249f349.js.map": "/exchange-rate-converter/static/js/main.c249f349.js.map",
+    "787.e3291607.chunk.js.map": "/exchange-rate-converter/static/js/787.e3291607.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a0cc1c27.css",
-    "static/js/main.05c1e967.js"
+    "static/js/main.c249f349.js"
   ]
 }
