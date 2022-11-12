@@ -1,6 +1,6 @@
 {
   "name": "exchange-rate-converter",
-  "home": "http://katerynananyzniuk.github.io/exchange-rate-converter",
+  "homepage": "http://katerynananyzniuk.github.io/exchange-rate-converter/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
