@@ -1,6 +1,6 @@
 export const About = () => {
   return (
-    <div className="min-h-full py-12 px-4">
+    <div className="min-h-full mx-auto max-w-7xl py-12 px-4">
       <div className="sm:px-4 md:px-10">
 
         <h2 className="font-bold">Описание</h2>
