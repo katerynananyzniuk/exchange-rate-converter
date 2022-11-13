@@ -34,7 +34,7 @@ export const ExchangeRate = () => {
 
   useEffect(() => {
     try {
-      fetchAmount(basicCurrencies)
+      // fetchAmount(basicCurrencies)
     } catch (error) {
       console.log('error', error)
     }

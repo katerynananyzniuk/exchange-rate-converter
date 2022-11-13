@@ -5,7 +5,7 @@ import {Navbar} from './components/Navbar'
 
 function App() {
   return (
-    <div className='min-width: fit-content'>
+    <div className='min-w-fit'>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

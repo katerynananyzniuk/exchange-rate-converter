@@ -81,7 +81,7 @@ function Converter() {
         return
       }
       if (currencies[0].amount || currencies[1].amount) {
-        fetchData(currencies, activeCurrencyId)
+        // fetchData(currencies, activeCurrencyId)
       console.log('currencies before fetch', currencies)
       }
     } catch (error) {

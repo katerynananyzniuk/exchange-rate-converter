@@ -24,12 +24,12 @@ function CurrencySelector({currency, onChangeCurrency, onChangeAmount}: Currency
   }
     
   return (
-    <div className="flex flex-wpap gap-2">
+    <div className="flex flex-wrap gap-2">
       <input
         min="1"
         ref = {inputRef}
         value={currency.amount}
-        className="block bg-white w-full min-w-fit border rounded-md py-2 pl-9 pr-3 focus:outline-none focus:border-violet-600 focus:violet-600" 
+        className="block bg-white border rounded-md py-2 pl-9 pr-3 focus:outline-none focus:border-violet-600 focus:violet-600" 
         placeholder={`Please enter amount...`}
         type="number"
         onChange={(event) => {
@@ -44,7 +44,7 @@ function CurrencySelector({currency, onChangeCurrency, onChangeAmount}: Currency
           selectChangeHandler(event)
           onChangeCurrency(currency.id, event.target.value)
         }}
-        className="uppercase py-2 pl-3 pr-9 min-w-fit border rounded-md focus:outline-none focus:border-violet-600"
+        className="uppercase py-2 pl-3 pr-9 border rounded-md focus:outline-none focus:border-violet-600"
       >
         { exchangeCurrencies.map((option, index) => {
           return (
