@@ -34,19 +34,19 @@ export const ExchangeRate = () => {
 
   useEffect(() => {
     try {
-      // fetchAmount(basicCurrencies)
+      fetchAmount(basicCurrencies)
     } catch (error) {
       console.log('error', error)
     }
   },[])
 
   return (
-    <div className="px-4 flex flex-wrap space-x-4">
+    <div className="px-4 flex space-x-4">
 
       {
         basicCurrencies.map((currency, index) => {
           return (
-            <div className="flex space-x-1" key={currency}>
+            <div className="flex flex-wrap justify-center space-x-1" key={currency}>
               <button className="text-violet-400 uppercase">{currencies[index].currency}</button>
               <div>{currencies[index].amount}</div>
             </div>

@@ -1,5 +1,5 @@
 import {NavLink} from 'react-router-dom'
-// import {ExchangeRate} from './ExchangeRate'
+import {ExchangeRate} from './ExchangeRate'
 
 export const Navbar = () => {
   return (
@@ -17,7 +17,7 @@ export const Navbar = () => {
             <NavLink to="/about" className="hover:bg-gray-700 px-3 py-2 rounded-md">About</NavLink>
           </div>
           
-          {/* <ExchangeRate /> */}
+          <ExchangeRate />
       </div>
     </nav>
   )
