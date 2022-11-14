@@ -27,7 +27,7 @@ function CurrencySelector({currency, onChangeCurrency, onChangeAmount}: Currency
     <div className="flex flex-wrap gap-2">
       <input
         min="1"
-        ref = {inputRef}
+        ref={inputRef}
         value={currency.amount}
         className="block bg-white border rounded-md py-2 pl-9 pr-3 focus:outline-none focus:border-violet-600 focus:violet-600" 
         placeholder={`Please enter amount...`}

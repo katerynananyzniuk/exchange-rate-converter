@@ -52,8 +52,6 @@ function Converter() {
         .catch(error => console.log('error', error))
       
       amount = response.conversion_result.toFixed(2)
-      
-      console.log(amount)
     }
     if (id === 1) {
       const response = await fetch(`https://v6.exchangerate-api.com/v6/${apikey}/pair/${currencies[1].currency}/${currencies[0].currency}/${currencies[id].amount}`)
@@ -61,8 +59,6 @@ function Converter() {
         .catch(error => console.log('error', error))
       
       amount = response.conversion_result.toFixed(2)
-      
-      console.log(amount);
     }
     setCurrencies(
       currencies.map(item => {
@@ -81,8 +77,7 @@ function Converter() {
         return
       }
       if (currencies[0].amount || currencies[1].amount) {
-        // fetchData(currencies, activeCurrencyId)
-      console.log('currencies before fetch', currencies)
+        fetchData(currencies, activeCurrencyId)
       }
     } catch (error) {
       console.log(error);
